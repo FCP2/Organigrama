@@ -1,0 +1,5 @@
+dash==2.14.2
+dash-bootstrap-components==1.5.0
+pandas==2.2.2
+gspread==5.12.0
+google-auth==2.29.0

@@ -1,0 +1,297 @@
+.btn-elegante {
+    background: #c3b08f;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    
+    font-size: 15px;
+    width: 180px;
+    height:50px;
+    
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin: 2px; /* <-- agrega espacio entre botones */
+}
+
+.btn-elegante:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.btn-elegante:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-elegante:focus {
+    outline: none;
+}
+.departamento-box {
+    width: 200px;  /* Aumentamos el ancho de la tarjeta */
+    height: 80px; /* Ajustamos la altura */
+    background: linear-gradient(to right, #540E10, #540E10);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #540E10;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+.departamento-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.departamento-box:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.titulo-organigrama {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    background: linear-gradient(to right, #5d272d, #e2ae02);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para las tarjetas nodos */
+.tarjeta-jefe {
+    width: 250px;  /* Aumentamos el ancho de la tarjeta */
+    height: 250px; /* Ajustamos la altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #977e5b;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    word-wrap: break-word; /* Permite el salto de línea en textos largos */
+}
+
+/* Estilo para las imágenes dentro de la tarjeta */
+.tarjeta-jefe img {
+    max-width: 100%;              /* Escala hasta llenar el ancho disponible */
+    max-height: 120px;            /* Altura máxima sin recortar */
+    height: auto;                 /* Mantiene la proporción original */
+    width: auto;                  /* Deja que el ancho se ajuste automáticamente */
+    border-radius: 10%;
+    object-fit: contain;          /* Evita recortes, mantiene proporción */
+    margin-bottom: 10px;
+    border: 2px solid #5d272d;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para los nombres y cargos */
+.tarjeta-jefe .nombre {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;  /* Permite que el cargo se divida en varias líneas si es necesario */
+    word-wrap: break-word;  /* Salto de línea automático si el texto es largo */
+    line-height: 1.2;  /* Ajuste de la altura de línea para mejorar la legibilidad */
+    color:white;
+}
+
+.tarjeta-jefe .cargo {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;  /* Permite que el cargo se divida en varias líneas si es necesario */
+    word-wrap: break-word;  /* Salto de línea automático si el texto es largo */
+    line-height: 1.2;  /* Ajuste de la altura de línea para mejorar la legibilidad */
+    color:white;
+}
+
+
+/* Estilo de la tarjeta personal modal */
+.tarjeta-personal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* permite mejor ajuste en pantallas pequeñas */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #eae1e1;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen modal centrada sin desplazar el contenido */
+.modal-imagen {
+    flex: 0 0 100px; /* ancho fijo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+/* Imagen con zoom suave */
+.img-modal-zoom {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #5d272d;
+    transition: transform 0.3s ease;
+}
+
+.img-modal-zoom:hover {
+    transform: scale(2.05);
+}
+
+/* Contenedor del texto */
+.modal-datos {
+    flex: 1; /* toma el resto del espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.modal-datos h4 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-datos p {
+  margin: 1px 0;
+  font-size: 14px;
+  line-height: 1.2; /* Más compacto */
+}
+
+.modal-datos p::before {
+  font-weight: bold;
+}
+/* Contenedor colapsable con transición suave */
+.contenido-expandible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    position: center;
+}
+
+/* Cuando está activo (visible) */
+.contenido-expandible.mostrar {
+    max-height: 2500px; /* valor alto para asegurar expansión */
+    opacity: 1;
+}
+.auxiliar {
+    border: 2px dashed #999;
+    background-color: #f7f7f7;
+}
+/* Estilos para el modal secretaria */
+/* Modal */
+/* Estilo para el texto de las tarjetas */
+/* Estilo para las tarjetas */
+.card {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
+    width: 100%;             /* Asegura que la tarjeta ocupe todo el ancho disponible */
+    margin: 10px;            /* Espaciado entre las tarjetas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    border-radius: 12px;     /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-4px); /* Efecto al pasar el ratón */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Sombra más intensa */
+}
+
+/* Estilo para el cuerpo de la tarjeta (foto y texto) */
+.card-body {
+    display: flex;
+    flex-direction: column;   /* Los elementos estarán alineados verticalmente */
+    align-items: center;      /* Centra los elementos dentro de la tarjeta */
+    padding: 15px;
+    text-align: center;       /* Centra el texto */
+}
+
+/* Estilo para la imagen de la persona */
+.card-img-top {
+    width: 80px;               /* Ajuste del tamaño de la imagen */
+    height: 80px;
+    object-fit: cover;         /* Mantiene la proporción de la imagen */
+    border-radius: 50%;        /* Imagen circular */
+    margin-bottom: 10px;       /* Espaciado inferior */
+}
+
+/* Estilo para el texto dentro de la tarjeta */
+.card-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Estilo para el botón dentro de la tarjeta */
+.card-body .btn-primary {
+    background-color: #007bff;  /* Fondo azul */
+    border: none;                /* Sin borde */
+    color: white;                /* Texto blanco */
+    font-weight: bold;           /* Negrita */
+    padding: 10px 20px;          /* Espaciado interno */
+    border-radius: 5px;          /* Bordes redondeados */
+    transition: background-color 0.3s;
+    margin-top: 10px;            /* Espaciado superior */
+}
+
+.card-body .btn-primary:hover {
+    background-color: #0056b3;  /* Fondo más oscuro al pasar el ratón */
+}
+
+/* Ajustes para la vista de los detalles ocultos */
+#detalle-tarjeta {
+    display: none;               /* Ocultar los detalles inicialmente */
+    padding-top: 10px;
+}
+/* Efecto hover para las tarjetas */
+.card:hover {
+    transform: translateY(-5px);  /* Sube la tarjeta un poco */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);  /* Sombra más pronunciada */
+}
+
+
+
+
