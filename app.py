@@ -774,5 +774,5 @@ def toggle_modal(n_clicks_jefes, n_clicks_personal, n_clicks_contrato, close_cli
             
     raise dash.exceptions.PreventUpdate
 
-if __name__ == '__main__':
-app.run_server(debug=False, host='0.0.0.0', port=8080)
+if __name__ == "__main__":
+    app.run_server(debug=False, host='0.0.0.0', port=8080)
